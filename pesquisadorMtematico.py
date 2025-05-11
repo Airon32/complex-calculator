@@ -14,10 +14,12 @@ while True:
         "[5] - calculadora de expondenciação\n" 
         "[6] - ver a tabuada de um numero\n" 
         "[7] - calcular a porcentagem\n" 
-        "[8] - calcular a potenciação\n" 
-        "[9] - calcular a radicação\nEscolha: "
+        "[8] - calcular a potenciação\n"
+        '[9] - calcular a area de alguma forma geometrica\n' 
+        "[10] - calcular a radicação\nEscolha: "
     ))
     
+
 
     if escolha == 1:
 
@@ -25,6 +27,7 @@ while True:
         numero1 = int(input("digite um numero: "))
         numero2 = int(input("degite um segundo numero: "))
         soma = numero1 + numero2
+
         print(f"\no resultado da sua conta é: {soma}\n") 
         print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
@@ -36,6 +39,7 @@ while True:
         numero1 = int(input("digite um numero: "))
         numero2 = int(input("digite o segundo numero: "))
         subtração = numero1 - numero2
+
         print(f"o resultado dessa coonta é igual: {subtração}")
         
 
@@ -46,6 +50,7 @@ while True:
         numero1 = int(input("digite um numero: "))
         numero2 = int(input("digite o segundo numero: "))
         multiplicação = numero1 * numero2
+
         print(f"o resultado dessa coonta é igual: {multiplicação}")
         print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
     
@@ -57,6 +62,7 @@ while True:
         numero1 = int(input("digite um numero: "))
         numero2 = int(input("digite o segundo numero: "))
         divisão = numero1 / numero2
+
         print(f"o resultado dessa coonta é igual: {divisão}")
         print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
@@ -68,6 +74,7 @@ while True:
         numero1 = int(input("digite um numero: "))
         numero2 = int(input("digite o segundo numero: "))
         expondenciação = numero1 ** numero2
+
         print(f"o resultado dessa coonta é igual: {expondenciação}")
         print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
@@ -116,7 +123,7 @@ while True:
                 resultado = Produto + juros 
 
             print(
-                f"Mês {mes}: Juros = R${juros:.2f} | Montante = R${resultado:.2f}"
+                f"\nMês {mes}: Juros = R${juros:.2f} | Montante = R${resultado:.2f}\n"
                 )
 
 
@@ -136,3 +143,72 @@ while True:
             print(
                 f"o valor total do jusos é: R${valorFinal:.2f}"
                 )
+    
+
+
+    if escolha == 8:
+       
+        print("\n-=-=-=-CALCULADORA DE POTENCIAÇÃO-=-=-=-\n")
+        base = int(input("digite o numero base: "))
+        expoente = int(input("degite o que sera o expoente: "))
+        resultado = base ** expoente
+
+        print(f"\no resultado da sua conta é: {resultado}\n") 
+        print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+ 
+
+
+    if escolha == 9:
+        
+        print("\n-=-=-=-CALCULADORA DE FORMAS GEOMETRICAS-=-=-=-\n")
+        escolha3 = int(input(
+            "[1] - calcular a area de triangulo\n" \
+            "[2] - calcular a area de um quadrado\n"
+            "[3] - calcular a area de trapezio\n"
+            "[4] - calcular a area de um circulo\n"
+            "[5] - calcular a area de um lozangulo\nEscolha: "  
+        ))
+
+        if escolha3 == 1:
+
+            base = int(input("digite o valor da base: "))
+            altura = int(input("digite a altura: "))
+            area = base * altura / 2
+
+            print(f"a area estimada do triangulo é: {area}")
+
+        
+        if escolha3 == 2:
+
+            base = int(input("digite o valor da base: "))
+            altura = int(input("digite o valor da altura: "))
+            area = base * altura
+
+            print(f"a area estimada do quadrado é: {area}")
+
+
+        if escolha3 == 3:
+
+            baseMenor = int(input("digite o valor da base menor: "))
+            baseMaior = int(input("digite o valor da base maior: "))
+            altura = int(input("digite o valor da altura: "))
+            area = baseMenor + baseMaior * altura / 2
+
+            print(f"a area estimada do lozangulo é: {area}")
+        
+
+        if escolha3 == 4:
+            constantePI = 3.14
+            raio = float(input("digite o valor do raio: "))
+            area = constantePI * raio ** 2
+
+            print(f"o a area estimado do circulo é: {area:.2f}")
+
+
+        if escolha3 == 5:
+
+            diagonalMenor = int(input("digite o valor da diagonal menor: "))
+            diagonalMaior = int(input("digite o valor da diagonal maior: "))
+            area = diagonalMenor * diagonalMaior / 2
+            
+            print(f"a area estimada do lozangolo é: {area}")
