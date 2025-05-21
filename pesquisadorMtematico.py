@@ -2,30 +2,46 @@ print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 print("-=-=-=-=-PESQUISADOR DE MULTIFUNÇÕES EM MATEMATICA-=-=-=-=-")
 print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
 
+import math
+
+def linha():
+    print("-" * 60)
+
 from time import sleep
 while True: 
-
+    linha()
     escolha = int(input(
-        "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"
-        "-=-=-=-=-FAÇA SUA EXCOLHA DE QUAL OPERAÇÃO DESEJA -=-=-=-=-\n"
-        "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n"
-        "\n[1] - calculadora de soma\n"
-        "[2] - calculdora de subtração\n" 
-        "[3] - caculadora de multiplicação\n" 
-        "[4] - calculadora de divisão\n" 
-        "[5] - calculadora de expondenciação\n" 
-        "[6] - ver a tabuada de um numero\n" 
-        "[7] - calcular a porcentagem\n" 
-        "[8] - calcular a potenciação\n"
-        '[9] - calcular a area de alguma forma geometrica\n' 
-        "[10] - calcular a radicação\nEscolha: "
+    "-=-=-=-=-FAÇA SUA EXCOLHA DE QUAL OPERAÇÃO DESEJA-=-=-=-=-\n"
+    "\n[1] - calculadora de soma\n"
+    "[2] - calculdora de subtração\n" 
+    "[3] - caculadora de multiplicação\n" 
+    "[4] - calculadora de divisão\n" 
+    "[5] - calculadora de expondenciação\n" 
+    "[6] - ver a tabuada de um numero\n" 
+    "[7] - calcular a porcentagem\n" 
+    "[8] - calcular a potenciação\n"
+    "[9] - calcular a area, perimetro e o volume de alguma forma geometrica\n" 
+    "[10] - calcular a radicação\n"
+    "[11] - calcular o fatorial de um número\n"
+    "[12] - verificar se um número é primo\n"
+    "[13] - calcular o (MDC) ou (MMC) de um numero\n"
+    "[14] - resolver equações de 2º grau\n"
+    "[15] - resolver equação de 1º grau\n"
+    "[16] - calcular logaritmos (base 10 ou base e)\n"
+    "[17] - calcular seno, cosseno e tangente de um ângulo\n"
+    "[18] - converter unidades de medida\n"
+    "[19] - calcular juros e desconto\n"
+    "[20] - simular financiamento ou parcelamento\n"
+    "[21] - converter horas em minutos e segundos\n"
+    "[22] - calcular a diferença entre dois horários\n"
+    "[23] - jogo de perguntas de matemática\n"
+    "[24] - teste de conhecimentos básicos\n"
+    "[25] - sair\nEscolha: "
     ))
-    
 
 
     if escolha == 1:
 
-        if escolha == 1:
             print("\n-=-=-=-CALCULADORA DE SOMA-=-=-=-\n")
             
             soma = 0
@@ -55,7 +71,6 @@ while True:
 
     if escolha == 2:
 
-        if escolha == 2:
             print("\n-=-=-CALCULADORA DE SUBTRAÇÃO-=-=-\n")
 
             numero1 = float(input("Digite o primeiro número: "))
@@ -85,7 +100,6 @@ while True:
 
     if escolha == 3:
 
-        if escolha == 2:
             print("\n-=-=-CALCULADORA DE MULTILICAÇÃO-=-=-\n")
 
             numero1 = float(input("Digite o primeiro número: "))
@@ -116,7 +130,6 @@ while True:
 
     if escolha == 4:
 
-        if escolha == 2:
             print("\n-=-=-CALCULADORA DE DIVISÃO-=-=-\n")
 
             numero1 = float(input("Digite o primeiro número (de onde a subtração vai começar): "))
@@ -260,7 +273,7 @@ while True:
 
 
     if escolha == 8:
-       
+        linha()
         print("\n-=-=-=-CALCULADORA DE POTENCIAÇÃO-=-=-=-\n")
         base = int(input("digite o numero base: "))
         expoente = int(input("degite o que sera o expoente: "))
@@ -280,7 +293,7 @@ while True:
 
 
     if escolha == 9:
-        
+        linha()
         print("\n-=-=-=-CALCULADORA DE FORMAS GEOMETRICAS-=-=-=-\n")
         escolha3 = int(input(
             "[1] - calcular a area de triangulo\n" \
@@ -332,7 +345,7 @@ while True:
             baseMenor = int(input("digite o valor da base menor: "))
             baseMaior = int(input("digite o valor da base maior: "))
             altura = int(input("digite o valor da altura: "))
-            area = baseMenor + baseMaior * altura / 2
+            area = (baseMenor + baseMaior) * altura / 2
             print("calculando...")
             sleep(1.5)
 
@@ -383,12 +396,16 @@ while True:
     
 
     if escolha == 10:
+        linha()
         print("\n-=-=-=-CALCULAR A RAIZ DE UM NUMERO-=-=-=-\n")
 
         numero = int(input("digite o numero desejado: "))
         indice = int(input("digite o indice desejado (2 para quadrada e 3 para cubica)"))
 
         raiz = numero ** (1 / indice)
+
+        print("calculando...")
+        sleep(1.5)
 
         print(f"a raiz do numero desejado é: {raiz}")
 
@@ -397,3 +414,131 @@ while True:
             continue
         if sair == 'nao':
             break
+
+
+
+    if escolha == 11:
+        linha()
+        print("\n-=-=-=-CALCULAR O FATORIAL DE UM NUMERO-=-=-=-\n")
+
+        numero = int(input("digite um numero: "))
+        fatorial= 1
+        for i in range(1, numero + 1):    
+            fatorial *= i
+
+        print("calculando...")
+        sleep(1.5)
+
+        print(f"o resultado para o numero digitado é: {fatorial}")
+
+        sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
+        if sair == 'sim':
+            continue
+        if sair == 'nao':
+            break
+
+    
+
+    if escolha == 12:
+        linha()
+        print("\n-=-=-=-VERIFICADOR DE NUMEROS PRIMOS-=-=-=-\n")
+        escolha = int(input(
+            "[1] - descobrir se é impar"
+            "[2] - descorir se é par"
+        ))
+        
+        if escolha == 1:
+
+            num = int(input(
+                "digite um numero: "
+            ))
+
+            if num / 2 != 0:
+                print(f"o numero {num} é inpar")
+            else:
+                print("o numero é par")
+
+            sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
+            if sair == 'sim':
+                continue
+            if sair == 'nao':
+                break
+
+        if escolha == 2: 
+
+            num = int(input(
+                "digite um numero: "
+            ))
+
+            if num / 2 == 0:
+                print(f"o numero {num} é par") 
+            else:
+                print("o numeor é impar")
+            
+            sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
+            if sair == 'sim':
+                continue
+            if sair == 'nao':
+                break
+
+    if escolha == 13:
+
+        linha()
+        print("\n-=-=-=-CALCULADOR DE MMC E MDC-=-=-=-\n")
+        escolha5 = int(input(
+            "[1] - calcular o MMC\n"
+            "[2] - calcular o MDC\nEscolha: "
+        ))
+        
+        if escolha5 == 1:
+            print("calcular o MMC")
+
+            numero = int(input(
+                "digite o numero: "
+            ))
+
+            numero2 = int(input(
+                "digite o segundo numro: "
+            ))
+
+            mmc = numero * numero2 // math.gcd(numero, numero2)
+
+            print("calculando...")
+            sleep(1.5)
+
+            print(f"\no mmc do numero desejado é igual à: {mmc}\n")
+
+            sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
+            if sair == 'sim':
+                continue
+            if sair == 'nao':
+                break
+
+        elif escolha5 == 2:
+        
+            print("calcular o MDC")
+            
+            a = int(input(
+                "digite o numero: "
+            ))
+
+            b = int(input(
+                "digite o segundo numro: "
+            ))
+
+            while b != 0:
+
+                resto = a % b
+                a = b
+                b = resto
+
+            print("calculando...")
+            sleep(1.5)
+
+            print(f"o MDC se resulta em: {a}")
+
+            sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
+            if sair == 'sim':
+                continue
+            if sair == 'nao':
+                break
