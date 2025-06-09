@@ -9,8 +9,8 @@ def linha():
 
 from time import sleep
 
-while True: 
-    
+while True:
+
     escolhaPrincipal = int(input(
         "\n-=-=-=QUAL GRUPO DE OPERAÇÕES VOCE DESEJA?-=-=-\n"
         "[1] - Operações Matematica basicas\n"
@@ -23,7 +23,7 @@ while True:
         "[8] - sair\nEscolha: \n"
     ))
 
-    if escolhaPrincipal == 1: 
+    if escolhaPrincipal == 1:
         print("catalogo tontas basicas:")
 
         escolha = int(input(
@@ -32,11 +32,11 @@ while True:
             "[3] - Calculadora de multiplicação\n"
             "[4] - Calculadora de divisão\n"
         ))
-        
+
         if escolha == 1:
 
                 print("\n-=-=-=-CALCULADORA DE SOMA-=-=-=-\n")
-                
+
                 soma = 0
 
                 while True:
@@ -53,7 +53,7 @@ while True:
                 print(f"\nO resultado da soma é: {soma}\n")
                 print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n")
 
-                sair = input("Deseja voltar ao menu principal? (sim ou nao): ").strip().lower()
+                sair = input("deseja somar outro numero?(sim ou nao)").strip().lower
                 if sair == 'sim':
                     continue
                 if sair == 'nao':
@@ -170,7 +170,7 @@ while True:
 
 
         if escolha == 5:
-        
+
             print("\n-=-=-CALCULADORA DE EXPONDENCIAÇÃO-=-=-\n")
             numero1 = int(input("digite um numero: "))
             numero2 = int(input("digite o segundo numero: "))
@@ -197,7 +197,7 @@ while True:
                 print(f"|{numero1} X {i} = {numero1 * i}|")
             print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
-        
+
         if escolha == 7:
 
             print("\n-=-=-CALCUALAR A PORCENTAGEM-=-=-\n")
@@ -239,7 +239,7 @@ while True:
 
                 for mes in range(1, tempo + 1):
                     juros = Produto * taxa * tempo
-                    resultado = Produto + juros 
+                    resultado = Produto + juros
                 print("calculando...")
                 sleep(1.5)
 
@@ -262,14 +262,14 @@ while True:
                 tempo = int(input("digite a o tempo (em meses) de atraso: "))
 
                 desconto = valorInicial * taxa * tempo
-                valorFinal = valorInicial - desconto 
+                valorFinal = valorInicial - desconto
                 print("calculando...")
                 sleep(1.5)
 
                 print(
                     f"O desconto é de R${desconto:.2f}"
                     )
-                
+
                 print(
                     f"o valor total do jusos é: R${valorFinal:.2f}"
                     )
@@ -292,7 +292,7 @@ while True:
             print("calculando...")
             sleep(1.5)
 
-            print(f"\no resultado da sua conta é: {resultado}\n") 
+            print(f"\no resultado da sua conta é: {resultado}\n")
             print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
             sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
@@ -311,7 +311,7 @@ while True:
                 "[2] - calcular a area de um quadrado\n"
                 "[3] - calcular a area de trapezio\n"
                 "[4] - calcular a area de um circulo\n"
-                "[5] - calcular a area de um lozangulo\nEscolha: "  
+                "[5] - calcular a area de um lozangulo\nEscolha: "
             ))
 
             if escolha3 == 1:
@@ -332,7 +332,7 @@ while True:
                     break
 
 
-            
+
             if escolha3 == 2:
 
                 base = int(input("digite o valor da base: "))
@@ -368,7 +368,7 @@ while True:
                     continue
                 if sair == 'nao':
                     break
-            
+
 
             if escolha3 == 4:
                 constantePI = 3.14
@@ -394,7 +394,7 @@ while True:
                 area = diagonalMenor * diagonalMaior / 2
                 print("calculando...")
                 sleep(1.5)
-        
+
                 print(f"a area estimada do lozangolo é: {area}")
                 print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 
@@ -404,7 +404,7 @@ while True:
                 if sair == 'nao':
                     break
 
-        
+
 
         if escolha == 10:
             linha()
@@ -434,7 +434,7 @@ while True:
 
             numero = int(input("digite um numero: "))
             fatorial= 1
-            for i in range(1, numero + 1):    
+            for i in range(1, numero + 1):
                 fatorial *= i
 
             print("calculando...")
@@ -448,7 +448,7 @@ while True:
             if sair == 'nao':
                 break
 
-        
+
 
         if escolha == 12:
             linha()
@@ -457,7 +457,7 @@ while True:
                 "[1] - descobrir se é impar"
                 "[2] - descorir se é par"
             ))
-            
+
             if escolha == 1:
 
                 num = int(input(
@@ -475,17 +475,17 @@ while True:
                 if sair == 'nao':
                     break
 
-            if escolha == 2: 
+            if escolha == 2:
 
                 num = int(input(
                     "digite um numero: "
                 ))
 
                 if num / 2 == 0:
-                    print(f"o numero {num} é par") 
+                    print(f"o numero {num} é par")
                 else:
                     print("o numeor é impar")
-                
+
                 sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
                 if sair == 'sim':
                     continue
@@ -500,7 +500,7 @@ while True:
                 "[1] - calcular o MMC\n"
                 "[2] - calcular o MDC\nEscolha: "
             ))
-            
+
             if escolha5 == 1:
                 print("calcular o MMC")
 
@@ -526,9 +526,9 @@ while True:
                     break
 
             elif escolha5 == 2:
-            
+
                 print("calcular o MDC")
-                
+
                 a = int(input(
                     "digite o numero: "
                 ))
@@ -553,14 +553,14 @@ while True:
                     continue
                 if sair == 'nao':
                     break
-        
+
         if escolha == 14:
             numero = int(input("Quantos números da sequência de Fibonacci deseja gerar? "))
 
             if numero <= 0:
                 print("por favor colocar um numero maior que 0")
             else:
-                fib = [0, 1]  
+                fib = [0, 1]
 
             for i in range (2, numero):
 
@@ -569,3 +569,64 @@ while True:
                 print(f"Os primeiros {numero} números da sequência de Fibonacci são:")
 
                 print(fib[:numero])
+
+                sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
+                if sair == 'sim':
+                    continue
+                if sair == 'nao':
+                    break
+
+
+        if escolha == 15:
+          print("\n=== CALCULADOR DE EQUAÇÃO DE SEGUNDO GRAU ===\n")
+          print("formula:")
+          print("x = (-b ± √(b² - 4ac)) / 2a")
+
+          a = float(input("digite valor de a: "))
+          b = float(input("digite o valor de b: "))
+          c = float(input("digie o valor de c: "))
+
+          delta = b**2 -4 * a * c
+
+          print("calculando...")
+          sleep(1)
+
+          if delta < 0:
+            print("o resultado não possui raiz")
+
+          elif delta > 0:
+            x = -b / (2 * a)
+            print(f"o resultado possui raiz real e resulta em: {x}")
+
+          else:
+            raiz_delta = math.sqrt(delta)
+            x1 = (-b + raiz_delta) / (2 * a)
+            x2 = (-b - raiz_delta) / (2 * a)
+            
+            print(f"a resultado de x1 e x2 é: \n")
+            print(f"x1 é igual à: {x1}")
+            print(f"x2 é igual à: {x2}")
+
+            sair = str(input("deseja continuar sim ou nao? ")).strip().lower()
+            if sair == 'sim':
+                continue
+            if sair == 'nao':
+                break
+
+        if escolha == 16:
+          print("\n=== CALCULADOR DE EQUAÇÃO DE PRIMEIRO GRAU ===\n")
+          print("formula: ")
+          print("ax + b = 0")
+
+          a = float(input("digite valor de a: "))
+          b = float(input("digite o valor de b: "))
+
+          if a == 0:
+            print(
+            "isso não é uma equação de primeiro grau:\n"
+            "por favor colocar um numero valido diferente de 0"
+            )
+
+          else:
+              x = -b / a
+              print(f"o resultado para esse euqação é: {x}")
